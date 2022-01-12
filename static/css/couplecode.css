@@ -1,0 +1,93 @@
+@font-face { 
+	font-family: 'pb';
+	src: url('/static/css/pbBold.ttf')  
+}
+
+
+body{
+	font-family: pb;
+	padding: 0;
+	background-color: whitesmoke; 
+	margin: 0;
+	padding: 1.5em;
+}
+
+h2, h3, ul, li{
+	margin: 0;
+	padding: 0;
+}
+
+.couplecode-header{
+	font-size: 28px;
+	padding: 1.5em;
+	padding-left: 0;
+	height: 50px;
+	display: inline-block;
+}
+
+.couplecode-img{
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	background-color: rgb(177,164,210);
+	display: block;
+	margin: 0 auto;
+	animation: move 2s linear infinite;
+	opacity: 0.8;
+	margin-top: 30px;
+}
+
+.button-container{
+	position: absolute;
+	top: 60%;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+
+.make-couplecode, .put-couplecode{
+	font-family: pb;
+	font-size: 24px;
+	border: none;
+	padding: 1em 3em;
+	border-radius: 5px;
+	background-color: whitesmoke;
+	background-image: linear-gradient(to top, white 0%, whitesmoke 100%);
+	padding: 0.7em 4.5em;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	color: rgb(177,164,210);
+	margin-top: 10px;
+	cursor: pointer;
+	display: block;
+	margin: 30px auto;
+}
+
+@keyframes move{
+	0%{
+		transform: scale(1);
+	}
+	50%{
+		transform: scale(1.2);
+	}	
+	100%{
+		transform: scale(1);
+	}
+}
+
+
+h2#swal2-title.swal2-title{
+	font-size: 18px;
+}
+
+.back-button{
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	vertical-align: middle;
+	margin-right: 20px;
+}
+
+.back-img{
+	width: 35px;
+	display: inline-block;
+}

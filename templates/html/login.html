@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>login</title>
+	<link href="/static/css/login.css" rel="stylesheet">
+	<meta name="viewport" content="css/width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+</head>
+<body>
+
+	<div class="login-tag-container">
+		<h2 class="login-tag">연인들의 아름다운 나눔</h2>
+	</div>
+
+		{% if error %}
+		<script>alert("{{ error }}");</script>
+		{% endif %}
+		<form action="{{ url_for('login') }}" method="POST">
+		<div class="login-container">
+			<h2 class="login">로그인</h2>
+			<div class="form-container">
+				<div class="form-id">
+					<img class="id-img" src="/static/img/id.png" width="20px">
+					<input type="text" class="id" placeholder="ID" name="username">
+				</div>
+				<div class="form-pw">
+					<img class="pw-img" src="/static/img/pw.png" width="20px">
+					<input type="password" class="pw" placeholder="password" name="password">
+				</div>
+			</div>
+			</form>
+			<button class="login-button" type="submit" >LOG IN</button>
+			<h3 class="sign-up">Not a member? <a href="/signup">Sign Up</a></h3>
+		</div>
+	
+</body>

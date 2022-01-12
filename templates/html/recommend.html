@@ -1,0 +1,40 @@
+<head>
+	<meta charset="UTF-8">
+	<title>상품추천</title>
+	<link href="/static/css/recommend.css" rel="stylesheet">
+	<meta name="viewport" content="css/width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	
+</head>
+<body>
+	<div class="recommend-header-container">
+		<button class="back-button" type="button" onclick="location.href='/'" ><img class="back-img" src="/static/img/backarrow.png"></button>
+		<h2 class="recommend-header">
+			상품추천
+		</h2>
+	</div>
+	<div class="all-recommend-container">
+		<ul class="all-recommend-list">
+			<li class="all-recommend"><img class="recommend-img" src="/static/img/travel.jpg">연인과 함께<br> <span>여행적금</span><br> 모으기</li>
+			<li class="all-recommend"><img class="recommend-img" src="/static/img/myhouse.jpg">누구나 원하는<br><span>내집마련</span>의<br> 첫걸음</li>
+			<li class="all-recommend"><img class="recommend-img" src="/static/img/coupledate.jpg"><span>데이트에 <br>안성맞춤</span>인<br> 카드혜택</li>
+			<li class="all-recommend"><img class="recommend-img" src="/static/img/piggybank.jpg"><span>티끌모아 태산</span>,<br> 학생들을 위한<br> 적금</li>
+		</ul>
+	</div>
+	<div class="myrecommend-header-container">
+		<h2 class="myrecommend-header">나에게 맞는 추천상품은?</h2>
+		<input class="recommend-button" type="button" name="recommend" value="추천받기"> 
+		<div class="myrecommend">
+			<h2><span>데이트에 안성맞춤</span>인<br> 카드혜택</h2>
+		</div>
+	</div>
+	
+	<script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+	<script type="text/javascript" src="/static/js/recommend.js"></script>	
+	<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</body>

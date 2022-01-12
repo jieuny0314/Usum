@@ -1,0 +1,108 @@
+@font-face { 
+	font-family: 'pb';
+	src: url('/static/css/pbBold.ttf')  
+}
+
+
+h2{
+	margin: 0;
+	padding: 0;
+}
+
+h3{
+	margin: 0;
+	padding: 0;	
+}
+
+body{
+	font-family: pb;
+	padding: 0;
+	background-color: rgb(177,164,210); 
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+
+.login-container{
+	position: absolute;
+	padding: 10% 10%;
+	bottom: 10%;
+	left: 0;
+	right: 0;
+	background-color: #fffff8;
+	text-align: center;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.login{
+	font-size: 24px;
+	text-align: left;
+	color: #848484;
+	 
+}
+
+.form-container{
+	margin-top: 3em;
+	margin-bottom: 5em;
+}
+
+.form-id, .form-pw{
+	margin-bottom: 2em;
+}
+
+.id-img, .pw-img{
+	margin-right: 0.5em;
+}
+
+.id, .pw{
+	background-color: transparent;
+	width: 200px;
+	font-size: 18px;
+	font-family: pb;
+	padding: 1em 0.5em;
+	border: none;
+	border-bottom: 1px solid #848484; 
+	outline: none;
+}
+
+.login-button{
+	font-size: 19px;
+	font-family: pb;
+	border: none;
+	border-radius: 5px;
+	background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+	padding: 0.7em 4.5em;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	outline: none;
+	cursor: pointer;
+	color: white;
+	margin-bottom: 1em;
+}
+
+.sign-up{
+	margin-top: 1em;
+	color: black;
+}
+
+.sign-up a{
+	color: rgb(177,164,210);
+}
+
+.login-tag-container{
+	position: absolute;
+	top: 3%;
+	right: 5%;
+	color: white;
+	font-size: 12px;
+	color: transparent;
+
+-webkit-background-clip: text;
+-moz-background-clip: text;
+background-clip: text;
+text-shadow: 0px 3px 3px rgba(255,255,255,0.5);
+}
+

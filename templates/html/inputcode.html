@@ -1,0 +1,26 @@
+<head>
+	<meta charset="UTF-8">
+	<title>연인맺기</title>
+	<link href="/static/css/inputcode.css" rel="stylesheet">
+	<meta name="viewport" content="css/width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	
+</head>
+<body>
+	<div class="inputcode-container">
+		<div class="signup-tag-container">
+		<h2 class="signup-tag">연인들의 아름다운 나눔</h2>
+		</div>
+		<div class="inputcode-content">
+			<form action="/users/{{ user.id }}/setcode" method="POST">
+			<h2 class="inputcode-header">연인의 커플코드를<br> 입력하세요.</h2>
+			<input class="inputcode-text" type="text" name="code" placeholder="코드를 입력해주세요."> 
+			<input class="inputcode-button" type="submit" name="inputcode" value="제출하기">
+			<input class=
+			"back-button" type="button" name="back" value="돌아가기" onclick="location.href='/'">
+			</form>
+		</div>
+	</div>
+	<div class="inputcode-img-container">
+		<img class="inputcode-img" src="/static/img/heartbeat.png" width="90px">
+	</div>
+</body>

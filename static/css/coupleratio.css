@@ -1,0 +1,119 @@
+@font-face { 
+	font-family: 'pb';
+	src: url('/static/css/pbBold.ttf')  
+}
+body{
+	font-family: pb;
+	padding: 0;
+	margin: 0;
+	background-color: whitesmoke;
+/*
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+*/
+}
+
+h2, h3, p, ul, li{
+	margin: 0;
+	padding: 0;
+}
+
+li{
+	list-style: none;
+}
+
+.coupleratio-header-container{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: rgb(177,164,210);
+	height: 25%;
+	border-bottom-right-radius: 50px;
+	border-bottom-left-radius: 50px;
+	padding: 1.3em;
+}
+
+.coupleratio-header{
+	display: inline-block;
+	font-size: 28px;
+	padding: 0.5em;
+	margin-left: -20px;
+}
+
+.coupleratio-container{
+	position: absolute;
+	left: 20;
+	right: 20;
+	height: 68%;
+	top: 48%;
+	background-color: #fffff8;
+	padding: 1.5em 1em;
+	border-radius: 10px;
+	text-align: center;
+	overflow: scroll;
+	box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.coupleratio-man-container{
+	position: absolute;
+	left: 20;
+	right: 20;
+	height: 10%;
+	top: 49%;
+	background-color: #fffff8;
+	padding: 1.5em 1em;
+	border-radius: 10px;
+	text-align: left;;
+	overflow: scroll;
+	box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+	font-size: 12px;
+}
+
+.coupleratio-woman-container{
+	position: absolute;
+	left: 20;
+	right: 20;
+	height: 10%;
+	bottom: 14%;
+	background-color: #fffff8;
+	padding: 1.5em 1em;
+	border-radius: 10px;
+	text-align: left;;
+	overflow: scroll;
+	box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+	font-size: 12px;
+}
+
+.coupleratio-man-container h2{
+	margin-bottom: 0.3em;
+}
+
+.man-name, .woman-name{
+	font-size: 27px;
+	margin-bottom: 3em;
+}
+.man-pay, .woman-pay{
+	color: transparent;
+	background-color: mediumpurple;
+	-webkit-background-clip: text;
+	background-clip: text;
+	text-shadow: 0px 3px 3px rgba(255,255,255,0.5);
+	font-size: 26px;
+	margin-right: 3px;
+}
+
+.back-button{
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	vertical-align: middle;
+	margin-right: 20px;
+}
+
+.back-img{
+	width: 35px;
+	display: inline-block;
+}

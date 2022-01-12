@@ -1,0 +1,84 @@
+<head>
+	<meta charset="UTF-8">
+	<title>거래내역 조회하기</title>
+	<link href="/static/css/checklist.css" rel="stylesheet">
+	<meta name="viewport" content="css/width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	
+</head>
+<body>
+	<div class="checklist-header-container">
+	<button class="back-button" type="button" onclick="location.href='/'" ><img class="back-img" src="/static/img/backarrow.png"></button>
+		<h2 class="checklist-header">거래내역 조회하기</h2>
+	</div>
+	<div class="checklist-banner-container">
+		<ul class="checklist-banner">
+			<li>날짜</li>
+			<li>가맹점</li>
+			<li>금액</li>
+			<li><span>여부</span></li>
+		</ul>
+	</div>
+	<form method="post" action="/users/{{ user.id }}/datecheck">
+	<div class="checklist-container">
+		{% for list in cardHis['REC'] %}
+		<ul class="checklist">
+			<li>{{ list['Trdd'][4:6]+"/"+list['Trdd'][6:] }}</li>
+			<li>{{ list['AfstNm'] }}</li>
+			<li>{{ list['Usam'] }}원</li>
+			<li><input class="date-cost" type="checkbox" name="{{ list['CardAthzNo'] }}" valeu="dateChk"></li>
+		</ul>
+		{% endfor %}
+		<!--<ul class="checklist">
+			<li>11/01</li>
+			<li>Byway</li>
+			<li>18000원</li>
+			<li><input class="date-cost" type="checkbox" name="datecost" value="yes"></li>
+		</ul>
+		<ul class="checklist">
+			<li>11/01</li>
+			<li>Byway</li>
+			<li>18000원</li>
+			<li><input class="date-cost" type="checkbox" name="datecost" value="yes"></li>
+		</ul>
+		<ul class="checklist">
+			<li>11/01</li>
+			<li>Byway</li>
+			<li>18000원</li>
+			<li><input class="date-cost" type="checkbox" name="datecost" value="yes"></li>
+		</ul>
+		<ul class="checklist">
+			<li>11/01</li>
+			<li>Byway</li>
+			<li>18000원</li>
+			<li><input class="date-cost" type="checkbox" name="datecost" value="yes"></li>
+		</ul>
+		<ul class="checklist">
+			<li>11/01</li>
+			<li>Byway</li>
+			<li>18000원</li>
+			<li><input class="date-cost" type="checkbox" name="datecost" value="yes"></li>
+		</ul>
+		<ul class="checklist">
+			<li>11/01</li>
+			<li>Byway</li>
+			<li>18000원</li>
+			<li><input class="date-cost" type="checkbox" name="datecost" value="yes"></li>
+		</ul>
+		<ul class="checklist">
+			<li>11/01</li>
+			<li>Byway</li>
+			<li>18000원</li>
+			<li><input class="date-cost" type="checkbox" name="datecost" value="yes"></li>
+		</ul>
+		<ul class="checklist">
+			<li>11/01</li>
+			<li>Byway</li>
+			<li>18000원</li>
+			<li><input class="date-cost" type="checkbox" name="datecost" value="yes"></li>
+		</ul>-->
+	</div>
+   	
+	<button class="list-submit-button" type="submit" name="list-submit">제출하기</button>
+	</form>
+
+</body>

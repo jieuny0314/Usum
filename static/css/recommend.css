@@ -1,0 +1,145 @@
+@font-face { 
+	font-family: 'pb';
+	src: url('/static/css/pbBold.ttf')  
+}
+
+
+body{
+	font-family: pb;
+	padding: 0;
+	background-color: whitesmoke; 
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+h2, h3, ul, li{
+	margin: 0;
+	padding: 0;
+}
+
+.recommend-header-container{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	height: 20%;
+	background-color: rgb(177,164,210);
+	border-bottom-left-radius: 50px;
+	border-bottom-right-radius: 50px;
+	padding: 1.5em;
+	font-size: 20px;
+}
+
+.recommend-header{
+	display: inline-block;
+	font-size: 22px;
+	margin-left: -10px;
+	
+}
+
+.all-recommend-container{
+	position: absolute;
+	top: 18%;
+	left: 10;
+	right: 10;
+}
+
+.all-recommend-list li{
+	position: relative;
+	box-sizing: border-box;
+	list-style: none;
+	display: inline-block;
+	background-color: white;
+	width: 48%;
+	height: 150px;
+	border-radius: 5px;
+	margin-bottom: 20px;
+	padding: 0.5em;
+	box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+	font-size: 20px;
+	color: black;
+}
+
+.all-recommend-list li:hover{
+	background-color: #848484;
+	color: white;
+}
+
+.all-recommend-list li:nth-child(2n-1){
+	margin-right: 10px;
+}
+
+.all-recommend span{
+	background: linear-gradient(to top, #dddddd 50%, transparent 50%);
+}
+
+.myrecommend-header-container{
+	position: absolute;
+	top: 68%;
+	text-align: center;
+}
+
+.recommend-img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 180px;
+	height: 150px;
+	opacity: 0.3;
+}
+.recommend-button{
+	font-family: pb;
+	font-size: 20px;
+	border: none;
+	padding: 0.5em 1em;
+	border-radius: 5px;
+	background-color: whitesmoke;
+	box-shadow: 0px 4px 6px 2px #EEEEEE;
+	color: #848484;
+	margin-top: 10px;
+	cursor: pointer;
+}
+
+.myrecommend{
+	display: none;
+	box-sizing: border-box;
+	list-style: none;
+	background-color: white;
+	width: 100%;
+	height: 150px;
+	border-radius: 5px;
+	margin-top: 20px;
+	padding: 0.5em;
+	box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+	font-size: 16px;
+	color: #848484;
+	font-family: pb;
+	text-align: center;
+}
+
+.myrecommend h2{
+	line-height: 40px;
+	margin-top: 50%;
+	transform: translateY(-110%);
+}
+
+.myrecommend h2 span{
+	background: linear-gradient(to top, #dddddd 50%, transparent 50%);
+}
+
+
+.back-button{
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	vertical-align: middle;
+	margin-right: 20px;
+}
+
+.back-img{
+	width: 35px;
+	display: inline-block;
+}

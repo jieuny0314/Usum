@@ -1,0 +1,164 @@
+<head>
+	<meta charset="UTF-8">
+	<title>user</title>
+	<link href="/static/css/setcategory.css" rel="stylesheet">
+	<meta name="viewport" content="css/width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	
+</head>
+<body>
+	<div class="checklist-header-container">
+		<button class="back-button" type="button" onclick="location.href='/'" ><img class="back-img" src="/static/img/backarrow.png"></button>
+		<h2 class="checklist-header">거래내역 조회하기</h2>
+	</div>
+	<div class="checklist-banner-container">
+		<ul class="checklist-banner">
+			<li>날짜</li>
+			<li>가맹점</li>
+			<li><span>카테고리</span></li>
+		</ul>
+	</div>
+	<div class="checklist-container">
+		<form method="post" action="/users/{{ user.id }}/get_category">
+		{% for list in his %}
+		<ul class="checklist">
+			<li>{{ list['Trdd'].strftime("%m/%d") }}</li>
+			<li>{{ list['AfstNm'] }}</li>
+			<li><select class="category" name="{{ list['CardAthzNo'] }}">
+					<option 	value="음식점">음식점</option>
+					<option 	value="카페">카페</option>
+					<option 	value="교통">교통</option>
+					<option 	value="놀거리" selected>놀거리</option>
+					<option 	value="편의점">편의점</option>
+					<option 	value="패션">패션</option>
+					<option 	value="생필품">생필품</option>
+					<option 	value="기타">기타</option>
+				</select>
+			</li>
+		</ul>
+		{% endfor %}
+		<!--<ul class="checklist">
+			<li>11/01</li>
+			<li>Byway</li>
+			<li><select class="category" name="category-name">
+					<option 	value="음식점">음식점</option>
+					<option 	value="카페">카페</option>
+					<option value="교통">교통</option>
+					<option 	value="놀거리" selected>놀거리</option>
+					<option 	value="편의점">편의점</option>
+					<option 	value="패션">패션</option>
+					<option 	value="생필품">생필품</option>
+					<option 	value="기타">기타</option>
+				</select>
+			</li>
+		</ul>
+		<ul class="checklist">
+			<li>11/01</li>
+			<li>Byway</li>
+			<li><select class="category" name="category-name">
+					<option 	value="음식점">음식점</option>
+					<option 	value="카페">카페</option>
+					<option value="교통">교통</option>
+					<option 	value="놀거리" selected>놀거리</option>
+					<option 	value="편의점">편의점</option>
+					<option 	value="패션">패션</option>
+					<option 	value="생필품">생필품</option>
+					<option 	value="기타">기타</option>
+				</select>
+			</li>
+		</ul>
+		<ul class="checklist">
+			<li>11/01</li>
+			<li>Byway</li>
+			<li><select class="category" name="category-name">
+					<option 	value="음식점">음식점</option>
+					<option 	value="카페">카페</option>
+					<option value="교통">교통</option>
+					<option 	value="놀거리" selected>놀거리</option>
+					<option 	value="편의점">편의점</option>
+					<option 	value="패션">패션</option>
+					<option 	value="생필품">생필품</option>
+					<option 	value="기타">기타</option>
+				</select>
+			</li>
+		</ul>
+		<ul class="checklist">
+			<li>11/01</li>
+			<li>Byway</li>
+			<li><select class="category" name="category-name">
+					<option 	value="음식점">음식점</option>
+					<option 	value="카페">카페</option>
+					<option value="교통">교통</option>
+					<option 	value="놀거리" selected>놀거리</option>
+					<option 	value="편의점">편의점</option>
+					<option 	value="패션">패션</option>
+					<option 	value="생필품">생필품</option>
+					<option 	value="기타">기타</option>
+				</select>
+			</li>
+		</ul>
+		<ul class="checklist">
+			<li>11/01</li>
+			<li>Byway</li>
+			<li><select class="category" name="category-name">
+					<option 	value="음식점">음식점</option>
+					<option 	value="카페">카페</option>
+					<option value="교통">교통</option>
+					<option 	value="놀거리" selected>놀거리</option>
+					<option 	value="편의점">편의점</option>
+					<option 	value="패션">패션</option>
+					<option 	value="생필품">생필품</option>
+					<option 	value="기타">기타</option>
+				</select>
+			</li>
+		</ul>
+		<ul class="checklist">
+			<li>11/01</li>
+			<li>Byway</li>
+			<li><select class="category" name="category-name">
+					<option 	value="음식점">음식점</option>
+					<option 	value="카페">카페</option>
+					<option value="교통">교통</option>
+					<option 	value="놀거리" selected>놀거리</option>
+					<option 	value="편의점">편의점</option>
+					<option 	value="패션">패션</option>
+					<option 	value="생필품">생필품</option>
+					<option 	value="기타">기타</option>
+				</select>
+			</li>
+		</ul>
+		<ul class="checklist">
+			<li>11/01</li>
+			<li>Byway</li>
+			<li><select class="category" name="category-name">
+					<option 	value="음식점">음식점</option>
+					<option 	value="카페">카페</option>
+					<option value="교통">교통</option>
+					<option 	value="놀거리" selected>놀거리</option>
+					<option 	value="편의점">편의점</option>
+					<option 	value="패션">패션</option>
+					<option 	value="생필품">생필품</option>
+					<option 	value="기타">기타</option>
+				</select>
+			</li>
+		</ul>
+		<ul class="checklist">
+			<li>11/01</li>
+			<li>Byway</li>
+			<li><select class="category" name="category-name">
+					<option 	value="음식점">음식점</option>
+					<option 	value="카페">카페</option>
+					<option value="교통">교통</option>
+					<option 	value="놀거리" selected>놀거리</option>
+					<option 	value="편의점">편의점</option>
+					<option 	value="패션">패션</option>
+					<option 	value="생필품">생필품</option>
+					<option 	value="기타">기타</option>
+				</select>
+			</li>
+		</ul>
+	</div>-->
+   	</div>
+	<button class="list-submit-button" type="submit">제출하기</button>
+	</form>
+
+</body>

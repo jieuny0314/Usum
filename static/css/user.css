@@ -1,0 +1,170 @@
+@font-face { 
+	font-family: 'pb';
+	src: url('/static/css/pbBold.ttf')  
+}
+body{
+	font-family: pb;
+	padding: 0;
+	margin: 0;
+	background-color: whitesmoke;
+/*
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+*/
+}
+
+h2, h3, p, ul, li{
+	margin: 0;
+	padding: 0;
+}
+
+li{
+	list-style: none;
+}
+
+.user-profile-container{
+	position: absolute;
+	left:0;
+	right: 0;
+	height: 20%;
+	background-color: rgb(177,164,210);
+	border-bottom-left-radius: 50px;
+	border-bottom-right-radius: 50px;
+	padding: 1.5em;
+	padding-top: 1em;
+	z-index: 0;
+}
+
+
+
+.user-profile-img{
+	display: inline-block;
+	border: 1px solid white;
+	border-radius: 50%;
+	background-color: white;
+	padding: 10px;
+	width: 40px;
+	height: 40px;
+	vertical-align: bottom;
+	margin-right: 0.5em;
+}
+
+.user-header-container{
+	display: inline-block;
+	padding: 0.5em;
+}
+
+.user-header{
+	margin-bottom: 0.2em;
+}
+
+.user-container{
+	position: absolute;
+	left: 0;
+	right: 0;
+	height: 82%;
+	background-color: transparent;
+	padding: 0 2em;
+	text-align: center;
+	top: 25%;
+	z-index:3;
+}
+
+
+.list-button, .connect-button, .daylist-button, .category-button, .service-button, .coupleratio-button, .recommend-button, .dutchpay-button {
+	position: relative;
+	width: 100%;
+	border: none;
+	font-size: 20px;
+	font-family: pb;
+	border: none;
+	border-radius: 5px;
+	text-align: left;
+	background-color: white;
+	padding: 0.6em 3em 3em 1em;
+	outline: none;
+	cursor: pointer;
+	color: #848484;
+	margin-bottom: 1.2em;
+	box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.list-button span, .connect-button span, .daylist-button span, .category-button span, .service-button span, .coupleratio-button span, .recommend-button span, .dutchpay-button span{
+	background: linear-gradient(to top, #dddddd 50%, transparent 50%);
+	
+}
+
+.category-button{
+	padding: 0.6em 1em;
+	padding-bottom: 0.3em;
+}
+
+.list-button, .daylist-button{
+	height: 10px;
+}
+
+.connect-button{
+	position: relative;
+}
+
+.connect-button-img{
+	position: absolute;
+	left: 70%;
+	top: 15;
+	width: 70px;
+	border-radius: 50%;
+	background-color: whitesmoke;
+	box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.category-button-img-list li{
+	display: inline-block;
+}
+
+.category-button-img-list{
+	margin-top: 0.6em;
+	margin-left: 4.5em;
+}
+
+.category-button-img{
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	padding: 0.5em;
+	background-color: whitesmoke;
+	box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.coupleratio-button-img, .recommend-button-img{
+	position: absolute;
+	right: 5%;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	padding: 0.4em;
+	background-color: whitesmoke;
+	box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.dutchpay-button{
+	margin-bottom: 2em;
+}
+
+.back-button-container{
+	margin-bottom: 20px;
+}
+
+.back-button{
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	vertical-align: middle;
+	margin-right: 20px;
+}
+
+.back-img{
+	width: 35px;
+	display: block;
+}

@@ -1,0 +1,62 @@
+<head>
+	<meta charset="UTF-8">
+	<title>user</title>
+	<link href="/static/css/user.css" rel="stylesheet">
+	<meta name="viewport" content="css/width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	
+</head>
+<body>
+<!--
+	<div class="menu-container">
+		<img class="menu-img" src="/static/img/menu.png" width="40px">
+	</div>
+-->
+	<div class="user-profile-container">
+		<div class="back-button-container">
+			<button class="back-button" type="button" onclick="location.href='/'" ><img class="back-img" src="/static/img/backarrow.png"></button>
+		</div>
+			<img class="user-profile-img" src="/static/img/user.png">
+			<div class="user-header-container">
+				<p class="user-header">
+					안녕하세요,
+				</p>
+				<h2 class="user-name">
+					"{{ user.accname }}" 님
+				</h2>
+			</div>
+	</div>
+	<div class="user-container">
+		
+		<button class="list-button" type="button" onclick="location.href='/users/{{ user.id }}/datecheck'"><span>거래내역 조회하기</span></button>
+		
+		<button class="connect-button" type="button" onclick="location.href='/users/{{ user.id }}/couplecode'"><span>커플 맺기</span>
+			<img class="connect-button-img" src="/static/img/heartbeat.png" width="100px;">
+		</button>
+		
+		<button class="daylist-button" type="button" onclick="location.href='/users/{{ user.id }}/daylist'"><span>월별 거래내역</span></button>
+		
+		<button class="category-button" type="button" onclick="location.href='/users/{{ user.id }}/catelist'"><span>카테고리별 소비비율</span>
+			<ul class="category-button-img-list">
+				<li><img class="category-button-img" src="/static/img/food.png"></li>
+				<li><img class="category-button-img" src="/static/img/mart.png"></li>
+				<li><img class="category-button-img" src="/static/img/shopping.png"></li>
+			</ul>
+		</button>
+		
+		<button class="coupleratio-button" type="button" onclick="location.href='/users/{{ user.id }}/coupleratio'"><span>연인 간 소비비율</span>
+		</button>
+		
+		<button class="recommend-button" type="button" onclick="location.href='/users/{{ user.id }}/product'"><span>상품 추천받기</span>
+			<img class="recommend-button-img" src="/static/img/card.png">
+		</button>
+		
+		<button class="dutchpay-button" type="button" onclick="location.href='/users/{{ user.id }}/dutchpay'"><span>더치페이 하기</span></button>
+		
+	</div>
+	
+	<script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+	<script type="text/javascript" src="/static/js/user.js"></script>
+</body>

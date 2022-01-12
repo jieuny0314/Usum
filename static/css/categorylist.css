@@ -1,0 +1,184 @@
+@font-face { 
+	font-family: pb;
+	src: url('/static/css/pbBold.ttf') 
+}
+
+body{
+	font-family: pb;
+	padding: 0;
+	background-color: whitesmoke; 
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+h2, h3{
+	margin: 0;
+	padding: 0;
+}
+
+li{
+	list-style: none;
+}
+
+ul{
+	margin: 0;
+	padding: 0;
+	text-align: left;
+}
+
+.category-header-container{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: rgb(177,164,210);
+	height: 25%;
+	border-bottom-right-radius: 50px;
+	border-bottom-left-radius: 50px;
+	padding: 1em;
+	padding-top: 2em;
+}
+
+.category-header{
+	display: inline-block;
+}
+
+.categorylist-header{
+	font-size: 38px;
+}
+
+.category-ratio-container{
+	position: absolute;
+	left: 20;
+	right: 20;
+	height: 20%;
+	top: 14%;
+	background-color: #fffff8;
+	padding: 1.5em 1em;
+	border-radius: 10px;
+	text-align: center;
+	overflow: scroll;
+	box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.category-ratio2-container{
+	position: absolute;
+	left: 15;
+	right: 15;
+	height: 45%;
+	bottom: 1%;
+	background-color: #fffff8;
+	padding: 1.5em 1em;
+	border-radius: 10px;
+	text-align: center;
+	overflow: scroll;
+	box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.category-profile{
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	margin-right: 10px;
+	margin-bottom: 20px;
+}
+
+.category-img{
+	width: 30px;
+	background-color: whitesmoke;
+	border-radius: 50%;
+	padding: 10px;
+	box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+	top: 0;
+	left: 0;
+}
+
+.category-name{
+	font-size: 16px;
+	color: #848484;
+	margin-top: 0.3em;
+}
+
+.category-bar{
+	position: relative;
+	display: inline-block;
+	height: 15px;
+	background-color: red;
+	border-radius: 50px;
+}
+
+.food .category-bar{
+	background-color: #ef404a;
+	opacity: 0.8;
+}
+
+.cafe .category-bar{
+	background-color: #f79552;
+	opacity: 0.8;
+}
+
+.car .category-bar{
+	background-color: #ffd400;
+	opacity: 0.8;
+}
+
+.movie .category-bar{
+	background-color: #80b463;
+	opacity: 0.8;
+}
+
+.convenience .category-bar{
+	background-color: #b0dfdb;
+	opacity: 0.8;
+}
+
+.fashion .category-bar{
+	background-color: #81d3eb;
+	opacity: 0.8;
+}
+
+.item .category-bar{
+	background-color: #9e7eb9;
+	opacity: 0.8;
+}
+
+.etc .category-bar{
+	background-color: black;
+	opacity: 0.8;
+}
+
+.category-percentage{
+	position: absolute;
+	right: -40;
+	font-size: 16px;
+	opacity: 1;
+}
+
+#pieChart{
+	position: absolute;
+	top: 15;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.back-button{
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	vertical-align: middle;
+	margin-right: 20px;
+}
+
+.back-img{
+	width: 35px;
+	display: inline-block;
+}
+
+
+
+
+
+

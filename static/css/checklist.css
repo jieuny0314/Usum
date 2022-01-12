@@ -1,0 +1,154 @@
+@font-face { 
+	font-family: pb;
+	src: url('/static/css/pbBold.ttf')  
+}
+
+body{
+	font-family: pb;
+	padding: 0;
+	background-color: whitesmoke; 
+	margin: 0;
+	display: flex;
+}
+
+h2, h3{
+	margin: 0;
+	padding: 0;
+}
+
+li{
+	list-style: none;
+}
+
+ul{
+	margin: 0;
+	padding: 0;
+}
+
+.checklist-header-container{
+	position: absolute;
+	left: 0;
+	right: 0;
+	background-color: rgb(177,164,210);
+	height: 20%;
+	padding: 2em;
+	padding-left: 1em; 
+	border-bottom-left-radius: 50px;
+	border-bottom-right-radius: 50px;
+}
+
+.checklist-header{
+	display: inline-block;
+}
+
+.checklist-banner-container{
+	position: absolute;
+	top: 100;
+	left: 20;
+	right: 20;
+	border-radius: 5px;
+	background-color: white;
+	padding: 0.7em 0.5em;
+	text-align: center;
+	box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.checklist-banner li{
+	display: inline-block;
+	font-size: 20px;
+	margin-right: 0.7em;
+	margin-left: 0.7em;
+	color: #848484;
+}
+
+.checklist-banner li span{
+	color: rgb(177,164,210);
+}
+
+.checklist-container{
+	text-align: left;
+	position: absolute;
+	left: 10;
+	right: 10;
+	bottom: 100;
+	background-color: white;
+	height: 50%;
+	border-radius: 5px;
+	padding: 2em 0.5em;
+	overflow-y: scroll;
+	box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+	
+}
+
+
+.checklist{
+	margin-bottom: 20px;
+	width: 350px;
+}
+
+
+
+.checklist li{
+	display: inline-block;
+	font-size: 16px;
+	margin-right: 0.8em;
+	margin-left: 0.8em;
+	color: #848484;
+	width: 70px;
+}
+
+.checklist li:nth-child(4){
+	width: 30px;
+	margin-left: 20px;
+	text-align: center;
+}
+
+.checklist li:nth-child(3){
+	margin: 0;
+	text-align: center;
+}
+
+.checklist li:nth-child(2){
+	width: 60px;
+	margin-left: 0;
+	text-align: center;
+}
+
+.checklist li:nth-child(1){
+	margin-left: 30px;
+	text-align: center;
+}
+
+.list-submit-button{
+	position: absolute;
+	display: block;
+	bottom: 20; 
+	left: 50%; 
+	transform: translateX(-50%);
+	height: 7%;
+	width: 250px;
+	font-size: 19px;
+	font-family: pb;
+	border: none;
+	border-radius: 5px;
+	background: linear-gradient(to bottom, #7D7494 0%, #B1A4D2 51%, #D7C7FF 100%);
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	outline: none;
+	cursor: pointer;
+	color: white;
+  	background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+}
+
+.back-button{
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	vertical-align: middle;
+	margin-right: 20px;
+}
+
+.back-img{
+	width: 35px;
+	display: inline-block;
+}
+

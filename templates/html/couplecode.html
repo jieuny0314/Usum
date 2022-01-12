@@ -1,0 +1,41 @@
+<head>
+	<meta charset="UTF-8">
+	<title>연결맺기</title>
+	<link href="/static/css/couplecode.css" rel="stylesheet">
+	<meta name="viewport" content="css/width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	
+</head>
+<body>
+	<button class="back-button" type="button" onclick="location.href='/'" ><img class="back-img" src="/static/img/backarrow.png"></button>
+	<h2 class="couplecode-header">커플코드</h2>
+	<img class="couplecode-img" src="/static/img/heartbeat.png">
+	<div class="button-container">
+		<input class="make-couplecode" type="button" name="make" value="생성하기">
+		<input class="put-couplecode" type="button" onClick="location.href='/users/{{ user.id }}/setcode'" name="put" value="입력하기">
+	</div>
+	
+	<script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+	<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script>
+    	$(document).ready(function(){
+		$('.make-couplecode').click(function(){
+		Swal.fire({
+                    title: '"{{ user.accname }}" 님의 커플코드는' ,
+                    text: "{{ code }} 입니다.",
+                    icon: 'info',
+					showCancelButton: false,
+					customClass : 'sweet-size',
+                    confirmButtonColor: '#6eb5ff',
+					confirmButtonText: '확인',
+                    
+                })
+		});
+	});
+    </script>
+</body>

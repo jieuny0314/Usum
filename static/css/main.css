@@ -1,0 +1,98 @@
+@font-face { 
+	font-family: 'pb';
+	src: url('/static/css/pbBold.ttf')  
+}
+
+body{
+	padding: 0;
+	background-color: rgb(177,164,210);
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	font-family: pb;
+/*	animation: gradation 5s ease infinite; */
+	
+}
+
+h1{
+	margin: 0;
+	font-size: 72px;
+	margin-bottom: 0.1em;
+	color: rgb(177,164,210);
+	color: transparent;
+	background: rgb(177,164,210);
+	-webkit-background-clip: text;
+	background-clip: text;
+	text-shadow: 0px 3px 3px rgba(255,255,255,0.5);
+	letter-spacing: 0em;
+}
+
+h3{
+	margin: 0;
+	font-size: 20px;
+	color: transparent;
+	background: rgb(177,164,210);
+	-webkit-background-clip: text;
+	background-clip: text;
+	text-shadow: 0px 3px 3px rgba(255,255,255,0.5);
+}
+
+/*
+.menu{
+	position: absolute;
+	top: 15%;
+	left: 70%;
+}
+
+.menu img{
+	width: 50px;
+	height: 50px;
+}
+*/
+
+
+.main-button{
+	font-family: pb;
+/*	box-shadow: 5px 5px 5px 4px rgb(255,168,173);*/
+	cursor: pointer;
+	outline: none;
+	font-size: 19px;
+	border: none;
+	border-radius: 5px;
+/*	background: linear-gradient(90deg,rgb(213,218,250) 0%, rgba(158,0,255,0.24) 80%);*/
+	padding: 1em 4.5em;
+	outline: none;
+	color: #848484;
+	background-color: white;
+	margin: 0 auto;
+	display: block;
+	box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.header-container{
+	display: block;
+	margin: 0 auto;
+	padding: 2em 1em 0em 1em;
+	border-radius: 5px;
+	text-align: center;
+	background-color: white;
+	width: 250px;
+	height: 160px;
+	margin-bottom: 10em;
+	box-shadow: 4px 5px 9px 0px rgba(46, 50, 50, 0.72);
+}
+
+
+
+
+/*
+@keyframes gradation { 
+	0%{background-position:0% 50%} 
+	50%{background-position:100% 50%}
+	100%{background-position:0% 50%}
+}
+*/
+
+

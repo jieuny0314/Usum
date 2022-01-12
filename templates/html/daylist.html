@@ -1,0 +1,67 @@
+<head>
+	<meta charset="UTF-8">
+	<title>월별 소비내역</title>
+	<link href="/static/css/daylist.css" rel="stylesheet">
+	<meta name="viewport" content="css/width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	
+</head>
+<body>
+	<div class="monthlist-header-container">
+		<button class="back-button" type="button" onclick="location.href='/'" ><img class="back-img" src="/static/img/backarrow.png"></button>
+		<h2 class="monthlist-header">
+			월별 소비내역
+		</h2>
+	</div>
+	<div class="sum">
+		<h2 class="sum-text">이번 달 소비금액은,<br> <span class="sum-text-span">{{ total }}원</span> 입니다.</h2>
+	</div>
+	<div class="monthlist-container">
+		<form action="/users/{{ user.id }}/daylist" method="POST" name="selectedMonth">
+		<select class="month" name="month-list" onChange="selectedMonth.submit()" id="selectBox">
+				<option 	value="01">01</option>
+				<option 	value="02">02</option>
+				<option value="03">03</option>
+				<option 	value="04">04</option>
+				<option 	value="05">05</option>	<option 	value="06">06</option>
+				<option 	value="07">07</option>
+				<option 	value="08">08</option>
+				<option value="09">09</option>
+				<option value="10">10</option>	<option 	value="11">11</option>
+				<option 	value="12" >12</option>
+		</select>
+				<h2 class="month-text">월</h2>
+				<div class="month-paylist-container">
+					<ul class="month-paylist">
+						{% for data in his %}
+						{% if data.Trdd.strftime("%m") == mon %}
+						<li class="month-paylist-item">
+							<ul class="month-paylist-inner">
+								<li class="date">{{ data.Trdd.strftime("%m/%d") }}</li>
+								<li class="store">{{ data.AfstNm }}</li>
+								<li class="price">{{ data.Usam }}원</li>
+							</ul>
+						</li>
+						{% endif %}
+						{% endfor %}
+					</ul>
+					
+				</div>
+	</div>
+	<div class="button-container">
+		<input class="go-category-button" type="button" name="go-category" value="카테고리별 소비비율" onclick="location.href='/users/{{ user.id }}/catelist'">
+			
+		<input type="button" name="go-ratio" class="go-ratio-button" value="연인 간 소비 비율" onclick="location.href='/users/{{ user.id }}/coupleratio'"> 
+	</div>
+	</form>
+	<script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+	<script type="text/javascript" src="/static/js/daylist.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#selectBox").val("{{ mon }}").prop("selected", true);
+		});
+	</script>
+	
+</body>

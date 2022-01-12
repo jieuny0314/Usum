@@ -1,0 +1,153 @@
+<head>
+	<meta charset="UTF-8">
+	<title>카테고리별 소비비율</title>
+	<link href="/static/css/categorylist.css" rel="stylesheet">
+	<meta name="viewport" content="css/width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	
+</head>
+<body>
+	<div class="category-header-container">
+		<button class="back-button" type="button" onclick="location.href='/'" ><img class="back-img" src="/static/img/backarrow.png"></button>
+		<h2 class="category-header">
+			카테고리별 소비비율
+		</h2>
+	</div>
+	<div class="category-ratio-container">
+		 <canvas id="pieChart" style="max-width: 350px"></canvas>
+	</div>
+	<div class="category-ratio2-container">
+		<ul class="category-list">
+			<li class="food">
+				<div class="category">
+					<div class="category-profile">
+						<img class="category-img" src="/static/img/food.png" width="30px">
+						<h2 class="category-name">음식점</h2>
+					</div>
+					<div class="category-bar">
+						<span class="category-percentage">{{ res['음식점'] }}%</span>
+					</div>
+			</div>
+			</li>
+			<li class="cafe">
+				<div class="category">
+					<div class="category-profile">
+						<img class="category-img" src="/static/img/cafe.png" width="30px">
+						<h2 class="category-name">카페</h2>
+					</div>
+					<div class="category-bar">
+						<span class="category-percentage">{{ res['카페'] }}%</span>
+					</div>
+			</div>
+			</li>
+			<li class="car">
+				<div class="category">
+					<div class="category-profile">
+						<img class="category-img" src="/static/img/car.png" width="30px">
+						<h2 class="category-name">교통</h2>
+					</div>
+					<div class="category-bar">
+						<span class="category-percentage">{{ res['교통'] }}%</span>
+					</div>
+			</div>
+			</li>
+			<li class="movie">
+				<div class="category">
+					<div class="category-profile">
+						<img src="/static/img/movie.png" class="category-img" src="/static/img/movie.png" width="30px">
+						<h2 class="category-name">놀거리</h2>
+					</div>
+					<div class="category-bar">
+						<span class="category-percentage">{{ res['놀거리'] }}%</span>
+					</div>
+			</div>
+			</li>
+			<li class="convenience">
+				<div class="category">
+					<div class="category-profile">
+						<img class="category-img" src="/static/img/mart.png" width="30px">
+						<h2 class="category-name">편의점</h2>
+					</div>
+					<div class="category-bar">
+						<span class="category-percentage">{{ res['편의점'] }}%</span>
+					</div>
+			</div>
+			</li>
+			<li class="fashion">
+				<div class="category">
+					<div class="category-profile">
+						<img class="category-img" src="/static/img/shopping.png" width="30px">
+						<h2 class="category-name">패션</h2>
+					</div>
+					<div class="category-bar">
+						<span class="category-percentage">{{ res['패션'] }}%</span>
+					</div>
+			</div>
+			</li>
+			<li class="item">
+				<div class="category">
+					<div class="category-profile">
+						<img class="category-img" src="/static/img/item.png" width="30px">
+						<h2 class="category-name">생필품</h2>
+					</div>
+					<div class="category-bar">
+						<span class="category-percentage">{{ res['생필품'] }}%</span>
+					</div>
+			</div>
+			</li>
+			<li class="etc">
+				<div class="category">
+					<div class="category-profile">
+						<img class="category-img" src="/static/img/etc.png" width="30px">
+						<h2 class="category-name">기타</h2>
+					</div>
+					<div class="category-bar">
+						<span class="category-percentage">{{ res['기타'] }}%</span>
+					</div>
+			</div>
+			</li>	
+		</ul>
+	</div>
+	
+	<script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+	<script>
+		$(document).ready(function(){
+	$('.category').each(function(){
+	var category = $(this);
+	var percentage = category.find('.category-percentage').text();
+	category.find('.category-bar').animate({width : percentage}, 1000);
+	});
+	$('.skills').animate({opacity : 1}, 1200);
+	
+	var ctxP = document.getElementById("pieChart").getContext('2d');
+    var myPieChart = new Chart(ctxP, {
+      type: 'pie',
+      data: {
+		  labels: ["음식점", "카페", "교통", "놀거리", "편의점", "패션", "생필품", "기타"],
+          datasets: [{
+		  data: [{{ res['음식점'] }}, {{ res['카페'] }}, {{ res['교통'] }}, {{ res['놀거리'] }}, {{ res['편의점'] }}, {{ res['패션'] }}, {{ res['생필품'] }}, {{ res['기타'] }}],
+          backgroundColor: ["#ef404a", "#f79552", "#ffd400", "#80b463", "#b0dfdb", "#81d3eb", "#9e7eb9", "black"],
+          
+        }]
+      },
+      options: {
+        responsive: true,
+        legend: {
+            position: 'right',
+			 labels: {
+                    fontColor: "#848484",
+                    boxWidth: 20,
+                    padding: 20,
+				 	fontSize: 10
+                }
+         }
+      }
+    });
+});
+
+	</script>
+</body>

@@ -1,0 +1,71 @@
+<head>
+	<meta charset="UTF-8">
+	<title>연인간 소비비율</title>
+	<link href="/static/css/coupleratio.css" rel="stylesheet">
+	<meta name="viewport" content="css/width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	
+</head>
+<body>
+	<div class="coupleratio-header-container">
+		<button class="back-button" type="button" onclick="location.href='/'" ><img class="back-img" src="/static/img/backarrow.png"></button>
+		<h2 class="coupleratio-header">
+			연인 간 소비비율
+		</h2>
+		<div class="coupleratio-container">
+		 <canvas id="pieChart" style="max-width: 350px"></canvas>
+	</div>
+	</div>
+	
+	<div class="coupleratio-man-container">
+		<h2><span class="man-name">"{{ user.accname }}"</span> 님의 이번달</h2>
+		<h2> 소비금액은 <span class="man-pay">{{ myTotal }}원</span>입니다. </h2>
+	</div>
+	
+	<div class="coupleratio-woman-container">
+		<h2><span class="woman-name">"{{ partner.accname }}"</span> 님의 이번달</h2>
+		<h2> 소비금액은 <span class="woman-pay">{{ paTotal }}원</span>입니다. </h2>
+	</div>
+	
+	<script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+	<script>
+		$(document).ready(function(){
+//$('.category').each(function(){
+//	var category = $(this);
+//	var percentage = category.find('.category-percentage').text();
+//	category.find('.category-bar').animate({width : percentage}, 1000);
+//});
+//	$('.skills').animate({opacity : 1}, 1200);
+	
+	var ctxP = document.getElementById("pieChart").getContext('2d');
+    var myPieChart = new Chart(ctxP, {
+      type: 'pie',
+      data: {
+		  labels: ["{{ user.accname }}", "{{ partner.accname }}"],
+          datasets: [{
+		  data: [{{ myPerct }}, {{ paPerct }}],
+          backgroundColor: ["#d3afd5", "#f7b4be"],
+          
+        }]
+      },
+      options: {
+        responsive: true,
+        legend: {
+            position: 'right',
+			 labels: {
+                    fontColor: "#848484",
+                    boxWidth: 20,
+                    padding: 20,
+				 	fontSize: 20
+                }
+         }
+      }
+    });
+});
+
+	</script>
+</body>

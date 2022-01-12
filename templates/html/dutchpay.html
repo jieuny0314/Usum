@@ -1,0 +1,67 @@
+<head>
+	<meta charset="UTF-8">
+	<title>더치페이</title>
+	<link href="/static/css/dutchpay.css" rel="stylesheet">
+	<meta name="viewport" content="css/width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	
+</head>
+<body>
+	<div class="dutchpay-header-container">
+		<button class="back-button" type="button" onclick="location.href='/'" ><img class="back-img" src="/static/img/backarrow.png"></button>
+		<h2 class="dutchpay-header">더치페이</h2>
+	</div>
+	<div class="todaypay-container">
+		<h2 class="todaypay"><span class="today">3일</span> 소비금액은<br> <span class="pay">{{ c_total }}원</span> 입니다.</h2>
+	</div>
+	<div class="userpay-container">
+		<h2 class="userpay"><span class="user">"{{ user.accname }} 님"</span> 의 소비금액은<br> <span class="pay2">{{ u_total }}원</span> 입니다.</h2>
+	</div>
+	{% if u_total - dutch < 0 %}
+	<div class="ask-dutchpay-container">
+		<h2 class="ask-dutchpay">
+			연인에게 <span class="send">이체</span>하시겠습니까?
+		</h2>
+		<div class="button-container">
+			<input type="button" class="send-yes" name="yes" value="예">/
+			<input type="button" class="send-no" name="no" value="아니오">
+		</div>
+	</div>
+	{% endif %}
+	
+	<script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+	<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script>
+
+$().ready(function () {
+            $(".send-yes").click(function () {
+				Swal.fire({
+                    title: '{{ partner.accname }}\n({{ p_banktype }} {{ partner.accnum }})',
+                    text: "님에게 {{ dutch - u_total }}원 이체하시겠습니까?",
+                    icon: 'question',
+					showCancelButton: true,
+					customClass : 'sweet-size',
+                    confirmButtonColor: '#6eb5ff',
+					cancelButtonColor: '#ffabab',
+                    confirmButtonText: '예',
+                    cancelButtonText: '아니오'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        Swal.fire(
+                            '이체가\n 완료되었습니다.'
+                           
+                        )
+                        window.open("/users/{{ user.id }}/sendpay?cost={{ dutch - u_total }}");
+                    }
+                })
+            });
+	
+        });
+
+
+    </script>
+</body>
