@@ -229,4 +229,4 @@ def getAccountOwnerNm(chkNH, Bncd, Acno):
 		res = requests.post(URL['InquireDepositorOtherBank'], headers=headers, data=json.dumps(jsondata))
 	
 	res_data = json.loads(res.text)
-	print(res_data)
+	print(res_data) 
